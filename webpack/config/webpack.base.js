@@ -18,6 +18,6 @@ export default () => {
       },
     },
     modules.loadPug(),
-    plugins.pluginPug()
+    plugins.setupPug()
   );
 };
