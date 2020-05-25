@@ -11,6 +11,8 @@ export default () => {
       mode: 'development',
       devtool: 'cheap-module-eval-source-map',
     },
-    modules.loadSassAndScss()
+    modules.loadSassAndScss(),
+    modules.loadSourceMap(),
+    modules.loadCss()
   );
 };
