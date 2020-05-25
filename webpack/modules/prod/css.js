@@ -1,3 +1,4 @@
+import { loader } from 'mini-css-extract-plugin';
 import cssLoader from '../../helper/css-loader';
 
 export function loadCss() {
@@ -6,7 +7,8 @@ export function loadCss() {
       rules: [
         {
           test: /\.css$/,
-          use: ['style-loader', cssLoader({ sourceMap: true })],
+          exclude: /node_modules/,
+          use: [loader, cssLoader({ sourceMap: false })],
         },
       ],
     },

@@ -1,3 +1,4 @@
+import { loader } from 'mini-css-extract-plugin';
 import cssLoader from '../../helper/css-loader';
 
 export function loadSassAndScss() {
@@ -7,7 +8,7 @@ export function loadSassAndScss() {
         {
           test: /\.(sass|scss)$/,
           exclude: /node_modules/,
-          use: ['style-loader', cssLoader({ sourceMap: true }), 'sass-loader'],
+          use: [loader, cssLoader({ sourceMap: false }), 'sass-loader'],
         },
       ],
     },
