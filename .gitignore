@@ -52,6 +52,6 @@ $RECYCLE.BIN/
 src/**/*.js
 src/**/*.map
 node_modules
-build
-public
-dist
+./build
+./public
+./dist

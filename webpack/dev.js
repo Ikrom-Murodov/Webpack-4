@@ -16,9 +16,7 @@ const compiler = Webpack(getDevConfig());
 const server = new DevServer(compiler, {
   host: HOST,
   port: PORT,
-  historyApiFallback: true,
   overlay: true,
-  quiet: true,
   clientLogLevel: 'none',
   noInfo: true,
   open: true,

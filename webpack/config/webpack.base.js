@@ -1,12 +1,23 @@
-import { join } from 'path';
 import { SOURCE_DIRECTORY, BUILD_DIRECTORY } from '../constans';
+import merge from 'webpack-merge';
+import { join } from 'path';
+
+// Базовые модули
+import * as modules from '../modules/base';
+
+// Базовый плагины
+import * as plugins from '../plugins/base';
 
 export default () => {
-  return {
-    entry: join(SOURCE_DIRECTORY, 'js/index.js'),
-    output: {
-      path: BUILD_DIRECTORY,
-      filename: 'js/[name.js]',
+  return merge(
+    {
+      entry: join(SOURCE_DIRECTORY, 'js/index.js'),
+      output: {
+        path: BUILD_DIRECTORY,
+        filename: 'js/[name].js',
+      },
     },
-  };
+    modules.loadPug(),
+    plugins.pluginPug()
+  );
 };
