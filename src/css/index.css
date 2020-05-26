@@ -1,3 +1,20 @@
+@font-face {
+  font-family: 'Alice';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/alice/regular/alice.eot');
+  src: local('Alice Regular'), local('Alice-Regular'),
+    url('../fonts/alice/regular/alice.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/alice/regular/alice.woff2') format('woff2'),
+    url('../fonts/alice/regular/alice.woff') format('woff'),
+    url('../fonts/alice/regular/alice.ttf') format('truetype');
+}
+
 body {
   background-color: black;
+  font-family: 'Alice';
+}
+
+h1 {
+  font-weight: 400;
 }

@@ -1,3 +1,5 @@
+import fileLoader from '../../helper/file-loader';
+
 export function loadImages() {
   return {
     module: {
@@ -5,14 +7,7 @@ export function loadImages() {
         {
           test: /\.(png|jpg|jpeg|svg)$/,
           exclude: /node_modules/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: 'images/[name].[ext]',
-              },
-            },
-          ],
+          use: [fileLoader({ folderName: 'images' })],
         },
       ],
     },
