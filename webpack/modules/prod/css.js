@@ -11,6 +11,7 @@ export function loadCss() {
           use: [
             cssExtractPlugin({ publicPath: '../' }),
             cssLoader({ sourceMap: false }),
+            'postcss-loader',
           ],
         },
       ],

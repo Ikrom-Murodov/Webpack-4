@@ -11,6 +11,7 @@ export function loadSassAndScss() {
           use: [
             cssExtractPlugin({ publicPath: '../' }),
             cssLoader({ sourceMap: false }),
+            'postcss-loader',
             'sass-loader',
           ],
         },
