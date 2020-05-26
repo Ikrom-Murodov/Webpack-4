@@ -1,4 +1,4 @@
-import { loader } from 'mini-css-extract-plugin';
+import cssExtractPlugin from '../../helper/css-extract-plugin';
 import cssLoader from '../../helper/css-loader';
 
 export function loadCss() {
@@ -8,7 +8,10 @@ export function loadCss() {
         {
           test: /\.css$/,
           exclude: /node_modules/,
-          use: [loader, cssLoader({ sourceMap: false })],
+          use: [
+            cssExtractPlugin({ publicPath: '../' }),
+            cssLoader({ sourceMap: false }),
+          ],
         },
       ],
     },

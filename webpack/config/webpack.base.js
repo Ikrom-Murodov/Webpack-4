@@ -18,6 +18,7 @@ export default () => {
       },
     },
     modules.loadPug(),
+    modules.loadImages(),
     plugins.setupPug()
   );
 };

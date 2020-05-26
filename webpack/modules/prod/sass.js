@@ -1,4 +1,4 @@
-import { loader } from 'mini-css-extract-plugin';
+import cssExtractPlugin from '../../helper/css-extract-plugin';
 import cssLoader from '../../helper/css-loader';
 
 export function loadSassAndScss() {
@@ -8,7 +8,11 @@ export function loadSassAndScss() {
         {
           test: /\.(sass|scss)$/,
           exclude: /node_modules/,
-          use: [loader, cssLoader({ sourceMap: false }), 'sass-loader'],
+          use: [
+            cssExtractPlugin({ publicPath: '../' }),
+            cssLoader({ sourceMap: false }),
+            'sass-loader',
+          ],
         },
       ],
     },
