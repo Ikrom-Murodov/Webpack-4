@@ -49,3 +49,12 @@ window.console.log(user.getUserName());
 window.console.log(user.getUserSurname());
 window.console.log(user.getUserAge());
 window.console.log(user.getFullName());
+
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+async function getData(url: string) {
+  const response = await fetch(url);
+  const responseJSON = await response.json();
+  window.console.log(responseJSON);
+}
+
+getData('https://jsonplaceholder.typicode.com/todos/1');

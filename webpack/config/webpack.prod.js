@@ -15,6 +15,7 @@ export default () => {
     },
     plugins.cleanBuildDirectory(),
     plugins.setupCss(),
+    modules.loadOptimizedJavascript(),
     modules.loadSassAndScss(),
     modules.loadCss()
   );
