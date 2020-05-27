@@ -13,6 +13,7 @@ export default () => {
     },
     modules.loadSassAndScss(),
     modules.loadSourceMap(),
+    modules.loadImages(),
     modules.loadCss()
   );
 };

@@ -17,7 +17,6 @@ export default () => {
         filename: 'js/[name].js',
       },
     },
-    modules.loadImages(),
     modules.loadFonts(),
     modules.loadPug(),
     plugins.setupPug()
