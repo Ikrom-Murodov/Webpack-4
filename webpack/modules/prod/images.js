@@ -8,7 +8,7 @@ export function loadOptimizedImages() {
           test: /\.(png|jpg|jpeg|svg)$/,
           exclude: /node_modules/,
           use: [
-            fileLoader({ folderName: 'images' }),
+            fileLoader({ folderName: 'images', contentHash: true }),
             {
               loader: 'image-webpack-loader',
               options: {

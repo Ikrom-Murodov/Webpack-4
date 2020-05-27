@@ -12,6 +12,23 @@ export default () => {
     getBaseConfig(),
     {
       mode: 'production',
+
+      output: {
+        filename: 'js/[name].[contenthash].js',
+      },
+
+      optimization: {
+        moduleIds: 'hashed',
+        splitChunks: {
+          cacheGroups: {
+            vendor: {
+              test: /[\\/]node_modules[\\/]/,
+              name: 'vendors',
+              chunks: 'all',
+            },
+          },
+        },
+      },
     },
     plugins.cleanBuildDirectory(),
     plugins.setupCss(),

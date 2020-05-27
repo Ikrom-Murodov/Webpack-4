@@ -1,8 +1,12 @@
-export default function fileLoader({ folderName = '' }) {
+function fileLoader({ folderName = '', contentHash = false }) {
   return {
     loader: 'file-loader',
     options: {
-      name: `${folderName}/[name].[ext]`,
+      name: contentHash
+        ? `${folderName}/[name].[contenthash].[ext]`
+        : `${folderName}/[name].[ext]`,
     },
   };
 }
+
+export default fileLoader;
