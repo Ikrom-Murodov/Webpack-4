@@ -7,6 +7,8 @@ import * as plugins from '../plugins/prod';
 // Модили для сборки проекта в режиме production
 import * as modules from '../modules/prod';
 
+import { BUILD_FOLDER_NAME } from '../constans';
+
 export default () => {
   return merge(
     getBaseConfig(),
@@ -15,6 +17,7 @@ export default () => {
 
       output: {
         filename: 'js/[name].[contenthash].js',
+        publicPath: `/${BUILD_FOLDER_NAME}/`,
       },
 
       optimization: {

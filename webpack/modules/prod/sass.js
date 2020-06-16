@@ -9,7 +9,7 @@ export function loadSassAndScss() {
           test: /\.(sass|scss)$/,
           exclude: /node_modules/,
           use: [
-            cssExtractPlugin({ publicPath: '../' }),
+            cssExtractPlugin(),
             cssLoader({ sourceMap: false }),
             'postcss-loader',
             'sass-loader',

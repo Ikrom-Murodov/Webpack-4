@@ -9,7 +9,7 @@ export function loadCss() {
           test: /\.css$/,
           exclude: /node_modules/,
           use: [
-            cssExtractPlugin({ publicPath: '../' }),
+            cssExtractPlugin(),
             cssLoader({ sourceMap: false }),
             'postcss-loader',
           ],
