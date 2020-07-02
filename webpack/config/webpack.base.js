@@ -19,6 +19,7 @@ export default () => {
     },
     modules.loadFonts(),
     modules.loadPug(),
-    plugins.setupPug()
+    plugins.setupPug(),
+    plugins.copyAssets()
   );
 };

@@ -14,6 +14,5 @@ export {
   HOST,
   PORT,
   PROJECT_ROT,
-  BUILD_FOLDER_NAME,
   SOURCE_FOLDER_NAME,
 };
