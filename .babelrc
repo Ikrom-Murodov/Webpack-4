@@ -9,6 +9,7 @@
         "spec": false,
         "useBuiltIns": "usage"
       }
-    ]
+    ],
+    ["@babel/preset-typescript"]
   ]
 }

@@ -11,12 +11,16 @@ import * as plugins from '../plugins/base';
 export default () => {
   return merge(
     {
-      entry: join(SOURCE_DIRECTORY, 'js/index.js'),
+      entry: join(SOURCE_DIRECTORY, 'index.ts'),
       output: {
         path: BUILD_DIRECTORY,
         filename: 'js/[name].js',
       },
+      resolve: {
+        extensions: ['.js', '.jsx', '.tsx', '.ts'],
+      },
     },
+    modules.loadTypeScript(),
     modules.loadFonts(),
     modules.loadPug(),
     plugins.setupPug(),

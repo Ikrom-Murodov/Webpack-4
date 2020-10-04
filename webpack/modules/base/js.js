@@ -1,9 +1,9 @@
-export function loadOptimizedJavascript() {
+export function loadTypeScript() {
   return {
     module: {
       rules: [
         {
-          test: /\.js$/,
+          test: /\.(js|jsx|tsx|ts)$/,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',

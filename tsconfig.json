@@ -10,6 +10,6 @@
     "moduleResolution": "node",
     "strict": true
   },
-  "include": ["src/ts/**/*", "typings/**/*"],
+  "include": ["src/**/*", "typings/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
 }

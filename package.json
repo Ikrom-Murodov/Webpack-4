@@ -4,9 +4,9 @@
   "description": "Сборка проекта на Webpack-4",
   "main": "src/js/index.js",
   "scripts": {
-    "ts-watch": "tsc --watch",
     "dev": "node -r esm webpack/dev.js",
-    "build": "node -r esm webpack/prod.js"
+    "build": "node -r esm webpack/prod.js",
+    "lint": "eslint ./src"
   },
   "author": {
     "name": "Ikrom Murodov",
@@ -19,6 +19,7 @@
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
+    "@babel/preset-typescript": "^7.10.4",
     "@typescript-eslint/eslint-plugin": "^3.0.0",
     "@typescript-eslint/parser": "^3.0.0",
     "app-root-path": "^3.0.0",
