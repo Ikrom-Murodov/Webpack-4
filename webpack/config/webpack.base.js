@@ -18,6 +18,9 @@ export default () => {
       },
       resolve: {
         extensions: ['.js', '.jsx', '.tsx', '.ts'],
+        alias: {
+          '@': join(SOURCE_DIRECTORY, 'ts'),
+        },
       },
     },
     modules.loadTypeScript(),

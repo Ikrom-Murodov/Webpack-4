@@ -9,8 +9,12 @@
     "noEmitOnError": true,
     "moduleResolution": "node",
     "strict": true,
-    "importHelpers": true
+    "importHelpers": true,
+    "baseUrl": "",
+    "paths": {
+      "@/*": ["src/ts/*"]
+    }
   },
   "include": ["src/**/*", "typings/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "exclude": ["node_modules"]
 }
