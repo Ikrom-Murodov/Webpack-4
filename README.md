@@ -1,3 +1,4 @@
+
 # Webpack Template
 
 ## Оглавление
@@ -21,7 +22,7 @@
 
 # Немного о сборке
 
-В этой сборке используется Webpack версии 4.43.0. В место [webpack-cli](https://webpack.js.org/api/cli/) используется [Node Interface](https://webpack.js.org/api/node/). Данная сборка поддерживает такие файлы как: .sass, .scss, .css, .js, .ts, .pug, .html .jpg, .png, .jpeg, .svg, .woff2, .woff, .eot, .ttf. Также данная сборка использует кэширование [caching](https://webpack.js.org/guides/caching/) и [code-splitting](https://webpack.js.org/guides/code-splitting/) и умеет сжимать и минифицировать код.
+В этой сборке используется Webpack версии 4.43.0. В место [webpack-cli](https://webpack.js.org/api/cli/) используется [Node Interface](https://webpack.js.org/api/node/). Данная сборка поддерживает такие файлы как: .sass, .scss, .css, .js, .ts, .pug, .html .jpg, .png, .jpeg, .svg, .woff2, .woff, .eot, .ttf. Также данная сборка использует кэширование [caching](https://webpack.js.org/guides/caching/) и [code-splitting](https://webpack.js.org/guides/code-splitting/) и умеет сжимать и минифицировать код. В качестве фреймворка для тестирование используется [Jest](https://jestjs.io/)
 
 # Начало работы
 
@@ -80,7 +81,6 @@ yarn run dev
 | **src/css**    | Содержит все ваши исходные css стили                                                         |
 | **src/fonts**  | Содержит все ваши исходные шрифты                                                            |
 | **src/images** | Содержит все ваши исходные изображение                                                       |
-| **src/js**     | Содержит все ваши исходные JavaScript скрипты                                                |
 | **src/pug**    | Содержит все ваши исходные pug шаблоны, которые потом будут скомпилированы в .html файл      |
 | **src/sass**   | Содержит все ваши исходные sass стили, которые потом будут скомпилированы в .css файл        |
 | **src/ts**     | Содержит все ваши исходные TypeScript скрипты, которые потом будут скомпилированы в .js файл |
@@ -113,6 +113,7 @@ yarn run dev
 | dev         | (yarn run dev) Webpack запустить проект в режиме разработки (development)                                                                                                        |
 | build       | (yarn run build) Webpack начнет собирать проект в режиме загрузки (production)                                                                                                   |
 | lint       | (yarn run lint) Eslint начинает проверять код
+| test       | (yarn run test) Jest начинает выполнять ваши тесты
 
 # Зависимости
 
@@ -150,3 +151,4 @@ yarn run dev
 | webpack                         | [webpack](https://webpack.js.org/) Позволять использовать webpack локально                                                                                                                                                                                                                   |
 | webpack-dev-server              | [webpack-dev-server](https://webpack.js.org/configuration/dev-server/)                                                                                                                                                                                                                       |
 | webpack-merge                   | [webpack-merge](https://github.com/survivejs/webpack-merge) 'Склеивает' несколько объектов                                                                                                                                                                                                   |
+
