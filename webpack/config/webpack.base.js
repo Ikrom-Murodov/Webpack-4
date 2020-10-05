@@ -15,6 +15,7 @@ export default () => {
       output: {
         path: BUILD_DIRECTORY,
         filename: 'js/[name].js',
+        publicPath: '/',
       },
       resolve: {
         extensions: ['.js', '.jsx', '.tsx', '.ts'],

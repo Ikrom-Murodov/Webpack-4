@@ -12,10 +12,8 @@ export default () => {
     getBaseConfig(),
     {
       mode: 'production',
-
       output: {
         filename: 'js/[name].[contenthash].js',
-        publicPath: '/',
       },
 
       optimization: {

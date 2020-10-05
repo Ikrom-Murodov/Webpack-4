@@ -7,19 +7,21 @@ import chalk from 'chalk';
 import getDevConfig from './config/webpack.dev';
 
 // Константы
-import { HOST, PORT } from './constans';
+import { HOST, PORT, BUILD_DIRECTORY } from './constans';
 
 // Компилятор webpack
 const compiler = Webpack(getDevConfig());
 
 // Сервер
 const server = new DevServer(compiler, {
+  contentBase: BUILD_DIRECTORY,
   host: HOST,
   port: PORT,
   overlay: true,
   clientLogLevel: 'none',
   noInfo: true,
   open: true,
+  historyApiFallback: true,
 });
 
 // 'Прослушивание' сервера
