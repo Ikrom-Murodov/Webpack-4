@@ -7,12 +7,8 @@
     "dev": "node -r esm webpack/dev.js",
     "build": "node -r esm webpack/prod.js",
     "lint": "eslint ./src",
-    "test": "jest"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/src/ts/$1"
-    }
+    "all-tests": "jest",
+    "e2e-tests": "jest e2e/"
   },
   "author": {
     "name": "Ikrom Murodov",
@@ -26,7 +22,10 @@
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-typescript": "^7.10.4",
+    "@types/expect-puppeteer": "^4.4.5",
     "@types/jest": "^26.0.14",
+    "@types/jest-environment-puppeteer": "^4.4.0",
+    "@types/puppeteer": "^3.0.3",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
     "app-root-path": "^3.0.0",
@@ -48,12 +47,14 @@
     "html-webpack-plugin": "^4.3.0",
     "image-webpack-loader": "^7.0.1",
     "jest": "^26.4.2",
+    "jest-puppeteer": "^4.4.0",
     "mini-css-extract-plugin": "^0.11.3",
     "node-sass": "^4.14.1",
     "postcss-loader": "^4.0.3",
     "prettier": "^2.0.5",
     "pug": "^3.0.0",
     "pug-loader": "^2.4.0",
+    "puppeteer": "^5.4.1",
     "sass-loader": "^10.0.2",
     "source-map-loader": "^1.1.0",
     "style-loader": "^1.2.1",
