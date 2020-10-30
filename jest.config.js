@@ -3,4 +3,5 @@ module.exports = {
     '^@/(.*)$': '<rootDir>/src/ts/$1',
   },
   preset: 'jest-puppeteer',
+  testTimeout: 999999,
 };
