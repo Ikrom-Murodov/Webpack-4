@@ -1,154 +1,174 @@
-
 # Webpack Template
 
-## Оглавление
+## Table of contents.
 
-- [Предварительные требования](#предварительные-требования)
-- [Немного о сборке](#немного-о-сборке)
-- [Начало работы](#начало-работы)
-- [Структура папок](#структура-папок)
-  - [Структура корневой директории](#вся-структура-корневой-директории-этого-приложения-объясняется-ниже)
-  - [Структура src директории](#вся-структура-src-директории-этого-приложения-объясняется-ниже)
-  - [Структура webpack директории](#вся-структура-webpack-директории-этого-приложения-объясняется-ниже)
-- [Npm Скрипты](#npm-скрипты)
-- [Зависимости](#зависимости)
+- [Pre requisites](#pre-requisites)
+- [A little about the assembly.](#a-little-about-the-assembly)
+- [Beginning of work.](#beginning-of-work)
+- [Folder structure](#folder-structure)
+  - [Root directory structure](#the-entire-root-directory-structure-of-this-application-is-explained-below)
+  - [Src directory structure](#the-entire-src-directory-structure-of-this-application-is-explained-below)
+  - [Webpack directory structure](#the-entire-webpack-directory-structure-of-this-application-is-explained-below)
+- [Npm scripts](#npm-scripts)
+- [Dev dependencies](#devdependencies)
 
-# Предварительные требования
+# Pre requisites.
 
-Чтобы собрать и запустить этот проект локально, вам понадобиться сделать несколько шагов:
+To build and run this project locally you need [Node.js](https://nodejs.org/en/).
 
-- Установить [Node.js](https://nodejs.org/en/)
-- Установить [VS Code](https://code.visualstudio.com/)
+# A little about the assembly.
 
-# Немного о сборке
+This project uses webpack version 4.43.0. Instead of [webpack-cli](https://webpack.js.org/api/cli/), 
+[Node Interface](https://webpack.js.org/api/node/) is used.
+This assembly supports files such as: .sass, .scss, .css, .js, .ts, .pug, .html .jpg, .png, .jpeg, .svg,
+.woff2, .woff, .eot, .ttf.
+This assembly also uses [caching](https://webpack.js.org/guides/caching/)  and 
+[code-splitting](https://webpack.js.org/guides/code-splitting/)  and can compress and minify code.
+[Jest](https://jestjs.io/) is used as  a framework for unit testing and 
+[jest](https://jestjs.io/) and [puppeteer](https://pptr.dev/) are used for testing e2e.
 
-В этой сборке используется Webpack версии 4.43.0. В место [webpack-cli](https://webpack.js.org/api/cli/) используется [Node Interface](https://webpack.js.org/api/node/). Данная сборка поддерживает такие файлы как: .sass, .scss, .css, .js, .ts, .pug, .html .jpg, .png, .jpeg, .svg, .woff2, .woff, .eot, .ttf. Также данная сборка использует кэширование [caching](https://webpack.js.org/guides/caching/) и [code-splitting](https://webpack.js.org/guides/code-splitting/) и умеет сжимать и минифицировать код. В качестве фреймворка для тестирование используется [Jest](https://jestjs.io/)
 
-# Начало работы
 
-- Клонировать репозиторий
+# Beginning of work.
+
+- Clone the repository.
 
 ```
 git clone https://github.com/Ikrom-Murodov/Webpack-4.git
 ```
 
-- Установите зависимости
+- Install dependencies.
 
 ```
 cd Webpack-4
 yarn
 ```
 
-- Собирать проект
+- Build project.
 
 ```
 yarn run build
 ```
 
-- Запустить проект
+- Run the project.
 
 ```
 yarn run dev
 ```
 
-# Структура папок
+# Folder structure
 
-#### Вся структура корневой директории этого приложения объясняется ниже:
+#### The entire root directory structure of this application is explained below:
 
-| Имя               | Описание                                                                                                                                                    |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **node_modules**  | Содержит все ваши npm зависимости                                                                                                                           |
-| **dist**          | Содержит файлы, готовые к использованию(выходные). Ваш код, который вы используйте в `production`                                                           |
-| **src**           | Содержит ваш исходный код, который будет скомпилирован в директорию /dist/                                                                                  |
-| **typings**       | Хранит .d.ts файлы декларации, которые не были найдены в DefinitelyTyped.                                                                                   |
-| **webpack**       | Содержит все файлы и папки для конфигурации webpack                                                                                                         |
-| .babelrc          | Конфигурационный файл babel [узнать больше](https://babeljs.io/docs/en/config-files)                                                                        |
-| .browserslistrc   | Конфигурация для совместного использования целевых браузеров и версий Node.js
-| .editorconfig     | EditorConfig это конфигурационный файл и набор расширений, к большому количеству редакторов кода и IDE
-| .eslintignore     | Конфиг настроек для ESLint, пути, которые будут исключены из линтинга(т.е. игнорируются, и линтер на них не действует)                                      |
-| .eslintrc         | Конфиг настроек для ESLint, определяющий стиль написания кода                                                                                               |
-| .gitignore        | Не отслеживать изменение в файлах с помощью git
-| .prettierrc       | Конфигурационный файл prettier|
-| package.json      | Файл, содержащий npm зависимости                                                                                                                            |
-| postcss.config.js | Конфигурационный файл postcss                                                                                                                               |
-| tsconfig.json     | Конфиг настроек для компиляции TypeScript в JavaScript                                                                                                      |
-| yarn.lock         | Yarn необходимо точное указание версии для каждой установленной зависимости. Для этого Yarn использует файл `yarn.lock` в корневом каталоге вашего проекта. |
+| Name                      | Description                                                                                                                                                 |
+| --------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **node_modules**          | Contains all your npm dependencies.                                                                                                                         |
+| **dist**                  | Contains files ready to use (output). Your code that you use in `production`                                                                                |
+| **src**                   | Contains all the source code for your application                                                                                                           |
+| **typings**               | Stores .d.ts declaration files that were not found in DefinitelyTyped.                                                                                      |
+| **webpack**               | Contains all files and folders for webpack config.                                                                                                          |
+| .browserslistrc           | Configuration for sharing target browsers and Node.js versions.                                                                                             |
+| .editorconfig             | EditorConfig is a configuration file and a set of extensions to many code editors and IDEs                                                                  |
+| .eslintignore             | Configuring settings for ESLint, paths that will be excluded from linting (i.e. ignored and the linter does not affect them)                                |
+| .eslintrc                 | Settings config for ESLint that determines the style of coding                                                                                              |
+| .gitignore                | Don't track change in files with git                                                                                                                        |
+| .prettierrc               | Prettier config file                                                                                                                                        |
+| .babel.config.js          | Configuration file for babel [learn more](https://babeljs.io/docs/en/config-files)                                                                          |
+| .jest.config.js           | Configuration file for Jest.                                                                                                                                |
+| jest.puppeteer.config.js  | Configuration file for jest and puppeteer.                                                                                                                  |
+| package.json              | File containing npm dependencies                                                                                                                            |      
+| postcss.config.js         | Postcss config file                                                                                                                                         |
+| tsconfig.json             | Configuration file for TypeScript.                                                                                                                          |
+| yarn.lock                 | Yarn needs an exact version for each installed dependency. To do this, Yarn uses the `yarn.lock` file in your project's root directory.                     |
 
-#### Вся структура src директории этого приложения объясняется ниже:
 
-| Имя            | Описание                                                                                     |
-| -------------- | -------------------------------------------------------------------------------------------- |
-| **src/css**    | Содержит все ваши исходные css стили                                                         |
-| **src/fonts**  | Содержит все ваши исходные шрифты                                                            |
-| **src/images** | Содержит все ваши исходные изображение                                                       |
-| **src/pug**    | Содержит все ваши исходные pug шаблоны, которые потом будут скомпилированы в .html файл      |
-| **src/sass**   | Содержит все ваши исходные sass стили, которые потом будут скомпилированы в .css файл        |
-| **src/ts**     | Содержит все ваши исходные TypeScript скрипты, которые потом будут скомпилированы в .js файл |
+#### The entire src directory structure of this application is explained below:
 
-#### Вся структура webpack директории этого приложения объясняется ниже:
+| Name            | Description                                                                                     |
+| -------------- | -------------------------------------------------------------------------------------------------|
+| **src/css**    | Contains all your original css styles                                                            |
+| **src/fonts**  | Contains all your original fonts                                                                 |
+| **src/images** | Contains all your original images                                                                |
+| **src/pug**    | Contains all your original  pug template, which will then be compiled into a .html file          |
+| **src/sass**   | Contains all your original sass styles,  which will then be compiled into a .css  file           |
+| **src/ts**     | Contains all your original TypeScript scrips, which will then be compiled into a .js file        |
 
-| Имя                            | Описание                                                                                                                                                                              |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **webpack/config**             | Содержит все ваши конфигурационные файлы webpack                                                                                                                                      |
-| webpack/config/webpack.base.js | Базовый конфигурационный файл webpack, от которой будут 'наследоваться' другие конфигурационные файлы webpack                                                                         |
-| webpack/config/webpack.dev.js  | Конфигурационный файл webpack-для режима разработки, который 'наследуется' от webpack.base.js                                                                                         |
-| webpack/config/webpack.prod.js | Конфигурационный файл webpack-для режима загрузки (production), который ‘наследуется’ от webpack.base.js                                                                              |
-| **webpack/modules**            | Содержит все конфигурационные модули webpack                                                                                                                                          |
-| webpack/modules/base           | Содержит базовые модули, которые будут использоваться в файле - webpack/config/webpack.base.js                                                                                        |
-| webpack/modules/dev            | Содержит модули, которые будут использованы в режиме разработки (development) в файле - webpack/config/webpack.dev.js                                                                 |
-| webpack/modules/prod           | Содержит модули, которые будут использованы в режиме загрузки (production) в файле - webpack/config/webpack.prod.js                                                                   |
-| **webpack/plugins**            | Содержит все конфигурационные плагины webpack                                                                                                                                         |
-| webpack/plugins/base           | Содержит базовые плагины, которые будут использоваться в файле - webpack/config/webpack.base.js                                                                                       |
-| webpack/plugins/dev            | Содержит плагины, которые будут использованы в режиме разработки (development) в файле - webpack/config/webpack.dev.js                                                                |
-| webpack/plugins/prod           | Содержит плагины, которые будут использованы в режиме загрузки (production) в файле - webpack/config/webpack.prod.js                                                                  |
-| webpack/constans.js            | Содержит пути к таким директориям как, SOURCE_DIRECTORY, BUILD_DIRECTORY и их можно настроить под себя, то есть можно указать путь сборки проекта, изменив переменную BUILD_DIRECTORY |
-| webpack/dev.js                 | Содержит настройки, тому как webpack должен работать в режиме разработки (development), а также получает конфигурационный файл webpack (webpack/config/webpack.dev.js)                |
-| webpack/prod.js                | Содержит настройки тому как webpack должен работать в режиме загрузки (production) а также получает конфигурационный файл webpack (webpack/config/webpack.prod.js)                    |
-| **webpack/helper**             | Содержит все плагины (plugins) и погрузчики (loaders) которые повторяются в конфигурационных файлах webpack                                                                           |
+#### The entire webpack directory structure of this application is explained below:
 
-# Npm Скрипты
+| Name                           | Description                                                                                                                                                                                  |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **webpack/config**             | Contains all your webpack config files.                                                                                                                                                      |
+| webpack/config/webpack.base.js | The base webpack config file from which other webpack config files will 'inherit'.                                                                                                           |
+| webpack/config/webpack.dev.js  | Webpack config file for development mode that 'inherits' from webpack.base.js                                                                                                                |
+| webpack/config/webpack.prod.js | Webpack config file for boot mode (production), which 'inherits' from webpack.base.js                                                                                                        |
+| **webpack/modules**            | Contains all webpack config modules                                                                                                                                                          |
+| webpack/modules/base           | Contains the base modules to be used in the file - webpack/config/webpack.base.js                                                                                                            |
+| webpack/modules/dev            | Contains modules that will be used in development mode in a file - webpack/config/webpack.dev.js                                                                                             |
+| webpack/modules/prod           | Contains modules to be used in production mode in a file - webpack/config/webpack.prod.js                                                                                                    |
+| **webpack/plugins**            | Contains all webpack config plugins                                                                                                                                                          |
+| webpack/plugins/base           | Contains basic plugins to be used in the file - webpack/config/webpack.base.js                                                                                                               |
+| webpack/plugins/dev            | Contains plugins to be used in development mode in a file - webpack/config/webpack.dev.js                                                                                                    |
+| webpack/plugins/prod           | Contains plugins to be used in production mode in a file - webpack / config / webpack.prod.js                                                                                                |
+| webpack/constans.js            | Contains paths to directories such as SOURCE_DIRECTORY, BUILD_DIRECTORY and they can be customized, that is, you can specify the project build path by changing the BUILD_DIRECTORY variable |
+| webpack/dev.js                 | Contains settings for how webpack should work in development mode, and also gets the webpack config file (webpack / config / webpack.dev.js)                                                 |
+| webpack/prod.js                | Contains settings for how webpack should work in production mode and also gets the webpack config file (webpack / config / webpack.prod.js)                                                  |
+| **webpack/helper**             | Contains all plugins and loaders that are repeated in webpack config files                                                                                                                   |
 
-| Имя скрипта | Описание                                                                                                                                                                         |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dev         | (yarn run dev) Webpack запустить проект в режиме разработки (development)                                                                                                        |
-| build       | (yarn run build) Webpack начнет собирать проект в режиме загрузки (production)                                                                                                   |
-| lint       | (yarn run lint) Eslint начинает проверять код
-| test       | (yarn run test) Jest начинает выполнять ваши тесты
+# Npm scripts
 
-# Зависимости
+| Script name | Description                                                                                             |
+| ----------- | --------------------------------------------------------------------------------------------------------|
+| dev         | (yarn run dev)        Webpack run project in development mode                                           |
+| build       | (yarn run build)      Webpack will start building the project in production mode                        |
+| lint        | (yarn run lint)       Eslint starts checking the code                                                   | 
+| all-tests   | (yarn run all-tests)  Jest starts running all your tests                                                |        
+| e2e-tests   | (yarn run e2e-tests)  Jest starts running your e2e-tests                                                |                                   
 
-## `devDependencies`
+# devDependencies
 
-| Пакет                           | Описание                                                                                                                                                                                                                                                                                     |
-| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| @babel/cli                      | Пакет [@babel/cli](https://babeljs.io/docs/en/babel-cli) обеспечивает возможность работы с babel через терминал. Предоставляет командную утилиту babel                                                                                                                                       |
-| @babel/core                     | Пакет [@babel/core](https://babeljs.io/docs/en/babel-core) содержит код, который выполняет всю работу по трансляции, но не содержит внутри себя правил преобразования. Правила описаны в отдельных пакетах, называемых плагинами                                                             |
-| @babel/preset-env               | [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env) Пресет - это группа плагинов, которую можно подключить к Babel целиком. _preset-env_ - основной пресет поддерживаемый командой Babel, который содержит внутри себя плагины, реализующие стандартизированные возможности js. |
-| app-rot-path                    | Этот простой модуль [app-root-path](https://www.npmjs.com/package/app-root-path) помогает вам получить доступ к корневому пути вашего приложения                                                                                                                                             |
-| autoprefixer                    | [autoprefixer](https://github.com/postcss/autoprefixer) Является плагином postcss, он нужен для того, чтобы автоматически добавлять префиксы                                                                                                                                                 |
-| babel-loader                    | Babel загрузчик для webpack [узнать больше](https://github.com/babel/babel-loader)                                                                                                                                                                                                           |
-| chalk                           | [Сhalk](https://github.com/chalk/chalk) Перекрашивает текст разными цветами в терминале                                                                                                                                                                                                      |
-| clean-webpack-plugin            | [clean-webpack-plugin](https://github.com/johnagan/clean-webpack-plugin) Плагин webpack для удаления ваших папок                                                                                                                                                                             |
-| css-loader                      | [css-loader](https://webpack.js.org/loaders/css-loader/) Переводит css в CommonJS                                                                                                                                                                                                            |
-| css-mqpacker                    | [css-mqpacker](https://github.com/lipemat/css-mqpacker) Является плагином postcss, он нужен для того, чтобы упаковывает медиазапросы                                                                                                                                                         |
-| cssnano                         | [cssnano](https://cssnano.co/guides/getting-started/) Является плагином postcss, он нужен для того, чтобы минифицировать код css                                                                                                                                                             |
-| eslint                          | [ESLint](https://eslint.org/) - это инструмент статического анализа кода для выявления проблемных шаблонов                                                                                                                                                                                   |
-| eslint-config-airbnb-typescript | [eslint-config-airbnb-typescript](https://github.com/iamturns/eslint-config-airbnb-typescript) Конфигурация Airbnb ESLint с поддержкой TypeScript                                                                                                                                            |
-| esm                             | [esm](https://github.com/standard-things/esm) - самый совершенный в мире загрузчик модулей ECMAScript. Этот быстрый, готовый к работе загрузчик с нулевой зависимостью - это все, что вам нужно для поддержки модулей ECMAScript в Node 6+                                                   |
-| file-loader                     | [file-loader](https://webpack.js.org/loaders/file-loader/) Загрузчик файлов преобразует import / require () для файла в URL и отправляет файл в выходной каталог.                                                                                                                            |
-| html-webpack-plugin             | [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin) Это плагин для webpack, который упрощает создание HTML-файлов для обслуживания ваших пакетов webpack                                                                                                                  |
-| image-webpack-loader            | [image-webpack-loader](https://github.com/tcoopman/image-webpack-loader) Модуль загрузки изображений для webpack, которая делает минификация PNG, JPEG, GIF, SVG                                                                                                                             |
-| mini-css-extract-plugin         | [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin) Этот плагин извлекает CSS в отдельные файлы. Он создает файл CSS для каждого файла JS, который содержит CSS.                                                                                           |
-| node-sass                       | [node-sass](https://github.com/sass/node-sass) Node-sass - это библиотека, которая обеспечивает привязку Node.js к LibSass, C-версии популярного препроцессора таблиц стилей Sass.                                                                                                           |
-| postcss-loader                  | [postcss-loader](https://github.com/postcss/postcss-loader) Загрузчик PostCSS для webpack                                                                                                                                                                                                    |
-| prettier                        | [prettier](https://prettier.io/) Форматирует код                                                                                                                                                                                                                                             |
-| pug                             | Нужен для webpack                                                                                                                                                                                                                                                                            |
-| pug-loader                      | [pug-loader](https://github.com/pugjs/pug-loader) Компилирует pug в html                                                                                                                                                                                                                     |
-| sass-loader                     | [sass-loader](https://github.com/webpack-contrib/sass-loader) Компилирует Sass в css                                                                                                                                                                                                         |
-| source-map-loader               | [source-map-loader](https://github.com/webpack-contrib/source-map-loader) Извлеките комментарии sourceMappingURL                                                                                                                                                                             |
-| style-loader                    | [style-loader](https://github.com/webpack-contrib/style-loader) Автоматически внедряет стили в DOM, используя несколько style style                                                                                                                                                          |
-| typescript                      | [typescript](https://www.typescriptlang.org/) Позволять использовать TypeScrpt локально                                                                                                                                                                                                      |
-| webpack                         | [webpack](https://webpack.js.org/) Позволять использовать webpack локально                                                                                                                                                                                                                   |
-| webpack-dev-server              | [webpack-dev-server](https://webpack.js.org/configuration/dev-server/)                                                                                                                                                                                                                       |
-| webpack-merge                   | [webpack-merge](https://github.com/survivejs/webpack-merge) 'Склеивает' несколько объектов                                                                                                                                                                                                   |
-
+| Package name                    | Description                                                                                                                                                                                                                                                                                     |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------
+| @babel/cli                         [@babel/cli](https://babeljs.io/docs/en/babel-cli)                                                        |
+| @babel/core                        [@babel/core](https://babeljs.io/docs/en/babel-core)                                                      |
+| @babel/preset-env                  [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env)                                          |
+| @babel/preset-typescript           [@babel/preset-typescript](https://babeljs.io/docs/en/babel-preset-typescript)                            |
+| @types/expect-puppeteer                                                                                                                      |
+| @types/jest                                                                                                                                  |
+| @types/jest-environment-puppeteer                                                                                                            |
+| @types/puppeteer                                                                                                                             |
+| @typescript-eslint/eslint-plugin                                                                                                             |
+| @typescript-eslint/parser          [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint)                       |
+| app-root-path                      [app-root-path](https://www.npmjs.com/package/app-root-path)                                              |
+| autoprefixer                       [autoprefixer](https://github.com/postcss/autoprefixer)                                                   |
+| babel-jest                         [babel-jest](https://github.com/babel/babel-jest)                                                         |
+| babel-loader                       [узнать больше](https://github.com/babel/babel-loader)                                                    |
+| chalk                              [Chalk](https://github.com/chalk/chalk)                                                                   |
+| clean-webpack-plugin               [clean-webpack-plugin](https://github.com/johnagan/clean-webpack-plugin)                                  |
+| copy-webpack-plugin                [copy-webpack-plugin](https://github.com/webpack-contrib/copy-webpack-plugin)                             |
+| css-loader                         [css-loader](https://webpack.js.org/loaders/css-loader/)                                                  |
+| css-mqpacker                       [css-mqpacker](https://github.com/lipemat/css-mqpacker)                                                   |
+| cssnano                            [cssnano](https://cssnano.co/guides/getting-started/)                                                     |
+| eslint                             [ESLint](https://eslint.org/)                                                                             |
+| eslint-config-airbnb-typescript    [eslint-config-airbnb-typescript](https://github.com/iamturns/eslint-config-airbnb-typescript)            |
+| eslint-plugin-jest                 [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest)                                |
+| esm                                [esm](https://github.com/standard-things/esm)                                                             |
+| file-loader                        [file-loader](https://webpack.js.org/loaders/file-loader/)                                                |
+| html-webpack-plugin                [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)                                    |
+| image-webpack-loader               [image-webpack-loader](https://github.com/tcoopman/image-webpack-loader)                                  |
+| jest                               [jest](https://jestjs.io/)                                                                                |
+| jest-puppeteer                     [jest-puppeteer](https://github.com/smooth-code/jest-puppeteer)                                           |
+| mini-css-extract-plugin            [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin)                     |
+| node-sass                          [node-sass](https://github.com/sass/node-sass)                                                            |
+| postcss-loader                     [postcss-loader](https://github.com/postcss/postcss-loader)                                               |
+| prettier                           [prettier](https://prettier.io/)                                                                          |
+| pug                                [pub](https://github.com/pugjs/pug)                                                                       |
+| pug-loader                         [pug-loader](https://github.com/pugjs/pug-loader)                                                         |
+| puppeteer                          [puppeteer](https://pptr.dev/)                                                                            |
+| sass-loader                        [sass-loader](https://github.com/webpack-contrib/sass-loader)                                             |
+| source-map-loader                  [source-map-loader](https://github.com/webpack-contrib/source-map-loader)                                 |
+| style-loader                       [style-loader](https://github.com/webpack-contrib/style-loader)                                           |
+| tslib                              [tslib](https://github.com/microsoft/tslib)                                                               |
+| typescript                         [typescript](https://www.typescriptlang.org/)                                                             |
+| webpack                            [webpack](https://webpack.js.org/)                                                                        |
+| webpack-dev-server                 [webpack-dev-server](https://webpack.js.org/configuration/dev-server/)                                    |
+| webpack-merge                      [webpack-merge](https://github.com/survivejs/webpack-merge)                                               |
